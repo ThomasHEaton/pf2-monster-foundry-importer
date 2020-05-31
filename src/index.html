@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>PF2 Foundry Importer</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
+</head>
+<section class="section">
+    <div class="container">
+        <h1 class="title">PF2e Foundry Monster Image Importer</h1>
+        <b>Version 0.6.0 Compatible</b>
+
+        <br/>
+
+        <p>Step 1: Select the pathfinder-bestiary.db inside of the Foundry App Data (typically
+            AppData/Local/Foundry/Data/systems/pf2e/packs/pathfinder-bestiary.db.</p>
+
+        <br/>
+
+        <div class="field">
+            <label class="label" for="foundryDb">Foundry DB</label>
+            <div class="control">
+                <input class="input is-primary" type="text" id="foundryDb" name="Foundry DB Path"
+                       placeholder="Foundry DB Path"/>
+            </div>
+            <button id="foundryPathBtn" class="button is-link is-light">Select Foundry DB</button>
+        </div>
+
+        <br/>
+
+        <p>Step 2: Select the image directory path. The files must be named with IDs to match the Nethys Monster IDs.
+            i.e. https://2e.aonprd.com/Monsters.aspx?ID=48 would map to 48.png (Grizzly Bear)</p>
+
+        <br/>
+
+        <div class="field">
+            <label class="label" for="imageDirPath">Image Directory</label>
+            <div class="control">
+                <input class="input is-primary" type="text" id="imageDirPath" name="Image Directory Path"
+                       placeholder="Image Directory Path"/>
+            </div>
+            <button id="imageDirPathBtn" class="button is-link is-light">Select Image Directory</button>
+        </div>
+
+        <br/>
+
+        <p>Step 3: Copy your Image Directory to AppData/Foundry/systems/pf2e/monsters/</p>
+
+        <br/>
+
+        <p>Step 4: Generate new Foundry DB. Download the file and replace your old pathfinder-bestiary.db. Restart
+            Foundry and enjoy!</p>
+
+        <br/>
+
+        <button id="uploadBtn" class="button is-link" disabled>Generate new Foundry DB</button>
+    </div>
+</section>
+<script src="render.js" defer></script>
+<script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+</body>
+</html>
