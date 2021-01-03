@@ -32,11 +32,13 @@ async function processMonsters(path, imageDirPath) {
 
 function modifyMonsterFields(monster, imageDirPath) {
     const nethysUrl = monster.data.details.nethysUrl;
-    const monsterId = nethysUrl.replace(nethysUrlPrefix, "");
+    if (nethysUrl != null){
+        const monsterId = nethysUrl.replace(nethysUrlPrefix, "");
 
-    if (fs.existsSync(`${imageDirPath}/${monsterId}.png`)) {
-        monster.img = `systems/pf2e/monsters/${monsterId}.png`;
-        monster.token.img = `systems/pf2e/monsters/${monsterId}.png`;
+        if (fs.existsSync(`${imageDirPath}/${monsterId}.png`)) {
+            monster.img = `systems/pf2e/monsters/${monsterId}.png`;
+            monster.token.img = `systems/pf2e/monsters/${monsterId}.png`;
+        }
     }
 }
 

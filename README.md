@@ -6,6 +6,8 @@ Here's a sample after running the tool.
 
 ![Sample Image](sample.png)
 
+Step 0: Run `yarn install`
+
 Step 1: Run `yarn start`
 
 Step 2: Select the pathfinder-bestiary.db inside of the Foundry App Data (typically AppData/Local/Foundry/Data/systems/pf2e/packs/pathfinder-bestiary.db).
